@@ -84,5 +84,45 @@ function checkInventory(scannedItem) {
 // Considering the console.log below, it would pass 'apples' and check for it against the foods objects
 // Which would return the value 27.
 }
-
 console.log(checkInventory("apples"));
+// Deleting properties from objects
+// This removes the apples AND grapes properties from the above foods object.
+delete foods.apples;
+delete foods.grapes;
+
+// Check if an object has a specific property
+// There are two ways to do this:
+// First: using the hasOwnProperty() method
+// Second: using the 'in' keyword
+// e.g:
+
+users.hasOwnProperty('Alan');
+'Alan' in users;
+
+let users = {
+    Alan: {
+      age: 27,
+      online: true
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: true
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+
+//  Write a function so that it returns true if the object passed to it contains all four names
+// Alan, Jeff, Sarah and Ryan and returns false otherwise.
+
+function isEveryoneHere(userObj) {
+    return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(name => userObj.hasOwnProperty(name));
+}
+
+console.log(isEveryoneHere(users));
