@@ -126,3 +126,25 @@ function isEveryoneHere(userObj) {
 }
 
 console.log(isEveryoneHere(users));
+
+// Write a function that takes an object with two properties and a string as arguments
+// It should return the value of the property with key equal to the value of the string
+
+function myObj(obj, key) {
+    return obj[key];
+}
+
+// Write a function that a string (a) as argument
+// Create an object that has a property with key 'key' and a value of a
+// Return the object
+
+function myFunction(a) {
+    const myObj = new Object();
+    myObj['key'] = a;
+    return myObj;
+ }
+
+// Alternatively, we may solve like so:
+// function myFunction(a) {
+//     return { key: a };
+// }
