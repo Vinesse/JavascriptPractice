@@ -170,3 +170,28 @@ function myFunction(a) {
     // return a.slice(0, a.length / 2);
     // remember, slice also works on strings
 }
+
+// Iterate Through the Keys of an Object with a for...in Statement
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(usersObj) {
+    let result = 0;
+    for (let user in usersObj) {
+      if (usersObj[user].online === true) {
+        result++;
+      }
+    }
+    return result;
+  }
+  
+  console.log(countOnline(users));
