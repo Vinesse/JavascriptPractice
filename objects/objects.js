@@ -7,7 +7,7 @@ function myFunction(obj) {
 
 // Write a function that takes an object with two properties as argument
 // It should return the value of the property with key 'prop-2'
-// Tipp: you might want to use the square brackets property accessor
+// Tip: you might want to use the square brackets property accessor
 
 function myFunction(obj) {
     return obj['prop-2'];
@@ -15,7 +15,6 @@ function myFunction(obj) {
 
 // If we have an object who we want to assign a new property
 // we do it by assigning the property to the object like so:
-
 const fictionalCharacter = {
     name: 'spongebob',
     type: 'sponge'
@@ -43,7 +42,6 @@ const fictionalCharacter = {
     age: 20,
     'best friend': 'patrick star',
     'home location': 'bikini bottom'
-
 }
 
 // Question: Can Objects be Const?
@@ -84,6 +82,7 @@ function checkInventory(scannedItem) {
 // Considering the console.log below, it would pass 'apples' and check for it against the foods objects
 // Which would return the value 27.
 }
+
 console.log(checkInventory("apples"));
 // Deleting properties from objects
 // This removes the apples AND grapes properties from the above foods object.
@@ -142,9 +141,32 @@ function myFunction(a) {
     const myObj = new Object();
     myObj['key'] = a;
     return myObj;
- }
+    // Alternatively, we may solve like so:
+    // function myFunction(a) {
+    //     return { key: a };
+    // }
+}
 
-// Alternatively, we may solve like so:
-// function myFunction(a) {
-//     return { key: a };
-// }
+// Write a function that takes an object (a) and a string (b) as argument
+// Return true if a has a property with key b
+// Return false otherwise
+
+function myFunction(a, b) {
+    return a.hasOwnProperty(b);
+    // alternatively,
+    // return b in a;
+}
+
+// Write a function that takes a string (a) as argument
+// Extract the first half a
+// Return the result
+
+function myFunction(a) {
+    if (a.length % 2 == 0) {
+        return a.substring(0, a.length / 2)
+    }
+    else return a.substring(0, a.length / 2 - 1 );
+    // alternatively, simply
+    // return a.slice(0, a.length / 2);
+    // remember, slice also works on strings
+}

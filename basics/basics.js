@@ -47,4 +47,3 @@ function myFunction(str) {
 function myFunction(str) {
     return str.slice(0, 3);
 }
-
