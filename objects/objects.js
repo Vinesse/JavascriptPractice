@@ -195,3 +195,30 @@ const users = {
   }
   
   console.log(countOnline(users));
+
+// Return an array containing all the properties in the object it receives as an argument.
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function myFunction(obj) {
+  return Object.keys(obj);
+}
+
+console.log(myFunction(users));
