@@ -9,3 +9,13 @@ function convertToF(celsius) {
     fahrenheit = celsius * 9/5 + 32;
     return fahrenheit;
 }
+
+// Reverse a String
+
+function reverseString(str) {
+// note: if the separator is an empty string (""), str is converted to an array of each of its UTF-16 "characters".
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+    return str.split('')
+        .reverse()
+        .join('');
+}
