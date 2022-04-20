@@ -19,17 +19,17 @@ var dog = {
     }
   };
 
-  dog.sayLegs();
+dog.sayLegs();
 
-  // Make Code More Reusable with the this Keyword
+// Make Code More Reusable with the this Keyword
 
-  var dog = {
-    name: "Spot",
-    numLegs: 4,
-    sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
-  };
+var dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
   
-  dog.sayLegs();
+dog.sayLegs();
 
 // Define a constructor function
 
@@ -37,8 +37,29 @@ function Dog() {
     this.name = 'george';
     this.color = 'brown';
     this.numLegs = 4;
-  }
+}
 
 // User a constructor to create objects
 
 let hound = new Dog();
+
+// Extend Constructors to Receive Arguments
+
+function Dog(name, color) {
+    this.name = name;
+    this.color = color;
+    this.numLegs = 4;
+  }
+
+let terrier = new Dog("bob", "black")
+
+// Verify an Object's Constructor with instanceof
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+let myHouse = new House(4);
+
+myHouse instanceof House
+
