@@ -19,3 +19,16 @@ function reverseString(str) {
         .reverse()
         .join('');
 }
+
+// Factorialize a number
+// (This means we want the product of all positive integers less than or equal to the num)
+
+function factorialize(num) {
+    let product = 1;
+    for (let i = 2; i <= num; i++) {
+        product *= i;
+    }
+    return product;
+}
+
+factorialize(5);
